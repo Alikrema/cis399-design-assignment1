@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Weather App</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <div class="weather-app">
+      <div class="top-row">
+        <img src="sun.png" alt="Sunny weather">
+        <p class="temperature">72°F</p>
+        <button id="temp-unit-btn" data-clicked="false">°C</button>
+      </div>
+
+      <div class="weather-table-row">
+        <table>
+          <tr>
+            <td>
+              M
+            </td>
+            <td>
+              T
+            </td>
+            <td>
+              W
+            </td>
+            <td>
+              R
+            </td>
+            <td>
+              F
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <p>75°F</p>
+              <img src="sun.png" alt="Sun">
+            </td>
+            <td>
+              <p>65°F</p>
+              <img src="cloud-sun.png" alt="Sun">
+            </td>
+            <td>
+              <p>55°F</p>
+              <img src="cloud-sun.png" alt="Sun">
+            </td>
+            <td>
+              <p>72°F</p>
+              <img src="sun.png" alt="Sun">
+            </td>
+            <td>
+              <p>53°F</p>
+              <img src="cloud-sun.png" alt="Sun">
+            </td>
+          </tr>
+        </table>
+      </div>
+
+            
+      <div class="bottom-row">
+        <p class="city-name">Philadelphia</p>
+        <p class="real-feel">Real Feel: 75°F</p>
+      </div>
+
+      <!-- <div class="top-row">
+        <p class="temperature">72°F</p>
+      </div> -->
+      <!-- <p class="temperature">72°F</p> -->
+
+      <form>
+        <ul>
+          <li><input type="checkbox" name="option1" value="Umbrella">Umbrella ☂️</li>
+          <li><input type="checkbox" name="option2" value="Backbag">Backbag 🎒</li>
+          <li><input type="checkbox" name="option3" value="Jacket">Jacket 🧥</li>
+        </ul>
+      </form>
+
+
+    </div>
+    <script>
+      // Add JavaScript code to handle the unit switch button here
+        var tempUnitBtn = document.getElementById("temp-unit-btn");
+        var isCelsius = true;
+        tempUnitBtn.addEventListener("click", function() {
+            if (isCelsius) {
+                tempUnitBtn.innerHTML = "°F";
+                isCelsius = false;
+            } else {
+                tempUnitBtn.innerHTML = "°C";
+                isCelsius = true;
+            }
+        });
+    </script>
+  </body>
+</html>
